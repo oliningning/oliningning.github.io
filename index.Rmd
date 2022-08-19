@@ -1,5 +1,5 @@
 ---
-title: "王宁宁的课程主页"
+title: "王宁宁的主页"
 author: " "
 output: 
   html_document: 
