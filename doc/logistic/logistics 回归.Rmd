@@ -1,0 +1,190 @@
+---
+title: "Logistic回归"
+subtitle: "介绍及应用"
+author: "王宁宁"
+institute: "广州医科大学 公共卫生学院"
+date: ""
+output:
+  xaringan::moon_reader:
+    css: [default, zh-CN.css]
+    lib_dir: libs
+    nature:
+      ratio: 16:9
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+class: inverse
+
+```{r xaringan-logo, echo=FALSE}
+xaringan_logo <- file.path(
+  "gylogo.png"
+)
+xaringanExtra::use_logo(xaringan_logo)
+```
+
+
+
+# 主要内容
+- ##模型简介
+
+- ## 单变量模型 例1
+
+- ## 多变量模型 例2
+---
+
+class: inverse, center, middle
+
+# 模型简介
+---
+
+
+# Logistic 回归模型
+
+.pull-left[
+### 多重线性模型： 
+$Y=\beta_0+\beta_1X_1+\beta_2X_2+\cdots+\beta_pX_p$
+###因变量Y：二分类
+  - ###得病或没有
+  - ###存活或死亡
+  - ###痊愈或没有
+
+]
+
+.pull-right[
+### 考虑概率模型:
+#### $P(Y=1|X)=P(X)=f(\beta_0+\beta X)$
+###如何选择 $f()$ :logistic 函数
+### $$p(X)=\frac{e^{\beta_0+\beta X}}{1+e^{\beta_0+\beta X}}$$
+### $$\frac{P(X)}{1-P(X)}=e^{\beta_0+\beta X}$$
+
+]
+---
+# Logistic 回归模型（续）:
+.pull-left[
+### $$log(\frac{P(X)}{1-P(X)})=\beta_0+\beta X$$
+###上式就是logistic回归模型
+###再回到上式： $$\frac{P(X)}{1-P(X)}=e^{\beta_0+\beta X}$$
+
+###看下：X=0 变化到X=1： 
+]
+--
+.pull-right[
+## $$e^{\beta}=\frac{\frac{P(1)}{1-P(1)}}{\frac{P(0)}{1-P(0)}}$$
+
+###右式正是OR值
+]
+---
+
+class: inverse, center, middle
+
+# 单变量模型
+
+---
+#例1
+
+>###例1	非甾体抗炎药上市后大样本安全性回顾性再评价。47136例服用该药的患者中，有155例上消化道出血(Y=1), 其余未出血(Y=0)；同期没有服用该药的44 634例对照中，有96例上消化道出血(Y=1)，其余未出血(Y=0)。（《卫生统计学》第5版）
+
+.pull-left[
+
+
+<img src="fig\fig2.png" style="width: 100%" />
+
+
+]
+
+.pull-right[
+###$$ OR=\frac{ad}{bc}=\frac{44538\times155}{46981\times96}=1.53$$
+]
+
+
+---
+
+
+<img src="fig\fig3.png" style="width: 70%" />
+
+<img src="fig\fig4.png" style="width: 80%" />
+
+###$$logit(Y)=-6.140+0.426X$$
+###注: $1.53=e^{0.426}$
+
+---
+# 变量赋值问题
+
+- ### 发生 :1； 没有发生：0
+- ### 暴露 :1；没有暴露：0
+
+- ### 赋值的好处
+  - ### 系数大于0：危险因素
+  - ### 系数小于0： 保护因素
+
+---
+
+class: inverse, center, middle
+
+# 多变量模型
+---
+# 例2
+
+>###例2	过去12个月关于是否戒烟的调查：共搜集了2229份问卷，统计了13个变量。（《卫生统计学》第5版）
+
+
+.pull-left[
+<img src="fig\fig5.png" style="width: 100%" />
+]
+
+.pull-right[
+- ###连续变量：X2
+- ###因变量：Y 
+- ###其余：分类变量
+]
+---
+
+<img src="fig\fig3.png" style="width: 100%" />
+
+---
+<img src="fig\fig6.png" style="width: 100%" />
+
+---
+
+# 哑变量的设置
+
+.pull-left[
+<img src="fig\fig7.png" style="width: 100%" />
+]
+
+.pull-right[
+<img src="fig\fig8.png" style="width: 100%" />
+]
+
+---
+
+<img src="fig\fig9.png" style="width: 70%" />
+---
+# 变量筛选
+
+<img src="fig\fig10.png" style="width: 70%" />
+
+---
+# 前向法条件概率结果
+
+<img src="fig\fig11.png" style="width: 90%" />
+
+
+---
+#建模目的
+
+- ## 因素筛查
+- ## 预测 
+  - ###Hosmer and Lemeshow 拟合优度检验 
+  - ###ROC 分析
+
+
+---
+
+class: inverse, center, middle
+
+# 谢谢大家！
+
+
