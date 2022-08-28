@@ -14,3 +14,8 @@ output:
 - [logistic回归](doc/logistic/logistics-回归.html)
 
 - [多重线性回归](doc/mlr/mltln.html)
+
+
+[8月29日]
+
+- [R简介](doc/1_Rintro/1_Rintro.html)
