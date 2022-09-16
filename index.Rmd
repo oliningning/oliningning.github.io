@@ -1,5 +1,5 @@
 ---
-title: "王宁宁的主页"
+title: "欢迎！"
 author: " "
 output: 
   html_document: 
@@ -19,3 +19,13 @@ output:
 [8月29日]
 
 - [R简介](doc/1_Rintro/1_Rintro.html)
+
+[9月5日]
+
+- [R对象](doc/3_baseR_objects-对象-.html)
+- [R向量](doc/4_baseR_vector（向量）.html)
+- [R数据结构](doc/5_baseR_data_structure（数据结构）.html)
+
+[9月19日]
+
+- [tidyverse简介](doc/3TidyIntro/3TidyIntro.html)
