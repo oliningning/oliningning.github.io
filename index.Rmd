@@ -6,6 +6,13 @@ output:
     toc: yes
 ---
 
+
+```{r, out.width = '50%', fig.align='center', echo = FALSE, fig.cap=''}
+knitr::include_graphics("fig/figmain.png")
+```
+
+
+
 [8月13日]
 
 - [logistic回归](doc/logistic/logistics-回归.html)
