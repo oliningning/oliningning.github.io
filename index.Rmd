@@ -32,7 +32,4 @@ knitr::include_graphics("fig/figmain.png")
 
 [9月19日]
 
-```{r, out.width = '50%', fig.align='center', echo = FALSE, fig.cap=''}
-knitr::include_graphics("fig/fig919.png")
-```
 - [tidyverse简介](doc/3TidyIntro/3TidyIntro.html)
