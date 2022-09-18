@@ -6,9 +6,6 @@ output:
     toc: yes
 ---
 
-
-
-
 [8月13日]
 
 - [logistic回归](doc/logistic/logistics-回归.html)
@@ -28,4 +25,7 @@ output:
 
 [9月19日]
 
+```{r, out.width = '50%', fig.align='center', echo = FALSE, fig.cap=''}
+knitr::include_graphics("fig/fig919.png")
+```
 - [tidyverse简介](doc/3TidyIntro/3TidyIntro.html)
