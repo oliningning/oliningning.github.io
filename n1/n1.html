@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>統計分析</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="王寧寧， Ph.D" />
+    <script src="libs/header-attrs-2.16/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link rel="stylesheet" href="zh-CN.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# 統計分析
+]
+.subtitle[
+## 第一講
+]
+.author[
+### 王寧寧， Ph.D
+]
+.institute[
+### <a href="mailto:oliningning@qq.com" class="email">oliningning@qq.com</a>
+]
+.date[
+### 2022/10/24
+]
+
+---
+
+
+---
+
+# 課程安排
+
+- ###第一講：基本原理；參數估計；單變量描述性分析
+- ###第二講：假設檢驗；t檢驗；方差分析
+- ###第三講：卡方檢驗和非參數檢驗
+- ###第四講：相關與回歸，多變量分析
+
+---
+##參考教材（可選）
+###《醫學統計學》
+###人民衛生出版社 （第7版）主編： 李康、賀佳
+
+&lt;img src="fig/fig4.png" width="35%" style="display: block; margin: auto;" /&gt;
+
+
+---
+#今天主要内容
+
+- ###醫學統計學的基本定義
+
+- ###單變量描述行分析
+
+- ###SPSS的基本操作
+
+- ### 中期教學檢驗
+
+---
+class: inverse, center, middle
+
+## 爲什麽要學習統計學
+
+---
+class: inverse, center, middle
+
+# 什麽是科學的問題？
+
+--
+# &lt;font color='red'&gt;証僞性&lt;/font&gt;
+
+--
+# &lt;font color='red'&gt;假設檢驗的證僞系統&lt;/font&gt;
+
+---
+
+##醫學論文中關於統計學P值使用的爭議
+
+
+&lt;img src="fig/fig1.png" width="105%" style="display: block; margin: auto;" /&gt;
+---
+
+## 爭論的結果
+
+- ###反對者：“P值就是是個屁！”
+- ###支持者：“論文中，沒有P值，連屁都不是！”
+
+- ###假設檢驗是至今爲止最有效的證僞系統
+
+- 參考：https://statmodeling.stat.columbia.edu/2019/03/20/retire-statistical-significance-the-discussion/
+---
+class: inverse, center, middle
+
+# 爲什麽要學習統計
+
+http://opinion.people.com.cn/n1/2017/0609/c1003-29327938.html
+
+&lt;img src="fig/fig2.png" width="35%" style="display: block; margin: auto;" /&gt;
+
+
+---
+
+class:  center, middle
+
+&lt;img src="fig/fig3.png" width="85%" style="display: block; margin: auto;" /&gt;
+---
+## 醫學統計學的定義
+
+###醫學統計學(medical statistics):臨床醫學、基礎醫學、公共衛生學和醫療衛生服務服務研究中的一門**基礎學科**，是關於搜集數據、分析數據和由數據得出結論的一組概念、原則和方法。 
+
+---
+## 學習醫學統計學的目的
+
+- ### 培養正確的統計思維
+- ### 掌握基本的統計設計方法和如何收集準確可靠的數據
+- ### 運用基本統計分析方法正確分析和處理數據
+- ### 掌握操作統計軟件的基本技能
+- ### 正確解釋和表達分析結果
+
+---
+
+class: inverse, center, middle
+
+# 變量和數據類型
+
+---
+
+## **定量數據**：
+
+###也稱計量資料，變量的觀測值是定量的，其特點是能用數值的大小衡量其水平的高低，一般有計量單位。
+
+## **定性數據**：
+
+### 也稱計數資料，變量的觀測值是定性的，表現為互不相容的類別或屬性。血型分爲A、B、O、AB
+
+---
+## 有序數據:
+
+### 也稱半定量數據或等級資料。變量的觀測值是定性的，但各類別（屬性）之間有程度或順序上的差別，如尿糖的化驗結果分爲-、+、++、+++。
+
+##&lt;font color='red'&gt;統計方法的選用與數據類型有密切關係。根據分析的需要，不同類型的變量或數據之家可以進行轉換。&lt;/font&gt;
+
+---
+
+class: inverse, center, middle
+# 數據的描述性分析
+
+---
+
+## 例：140名成年男子紅細胞數
+
+
+&lt;img src="fig/fig5.png" width="95%" style="display: block; margin: auto;" /&gt;
+
+- ###目的：了解數據分佈的情況
+- ###假定：來自正態分佈 `\(N(\mu,\sigma^2)\)`
+
+---
+
+ ## 頻數表
+
+### 確定組數-&gt;確定組距-&gt; 確定組限 -&gt;確定頻數
+
+&lt;img src="fig/fig6.png" width="95%" style="display: block; margin: auto;" /&gt;
+---
+## 直方圖
+
+
+&lt;img src="fig/fig7.png" width="95%" style="display: block; margin: auto;" /&gt;
+
+---
+## 集中趨勢的指標
+
+- ###算術均值（mean）： `\(\bar X(\mu)\)`
+- ###中位數（median）:  `\(M\)`
+- ###百分位數（percentile）
+- ###衆數（mode）
+---
+## 離散趨勢的指標
+- ###極差（range）: R
+- ###四分位間距 （interquantile range，IQR）
+- ###方差（variance） ： `\(S^2(\sigma^2)\)`
+- ###標準差（standard deviation S.D.）: `\(S(\sigma)\)`
+- ###變異係數(coefficient of variation, C.V.): 標準差/算術均值
+
+---
+class: inverse,middle,center
+
+## 使用SPSS繪製140名成年男子紅細胞數的頻數表和直方圖並計算上述各個指標
+
+---
+##如何描述定量變量
+
+- ###判斷是否正態分佈
+- ###具體方法：頻數表、直方圖、QQ圖、正態檢驗
+- ###準則：
+  - ####正態分佈：均值（標準差）
+  - ####非正態分佈：中位數（四分位間距）
+
+---
+
+class: inverse, center, middle
+# 正態分佈
+
+&lt;img src="fig/fig8.png" width="55%" style="display: block; margin: auto;" /&gt;
+
+---
+class:center,middle
+
+&lt;img src="fig/fig9.png" width="105%" style="display: block; margin: auto;" /&gt;
+
+### 某地正常成年男子紅細胞數的分佈情況
+---
+### 連續型隨機變量X服從正態分佈: `\(X\sim N(\mu,\sigma^2)\)` 
+
+&lt;img src="fig/fig8.png" width="55%" style="display: block; margin: auto;" /&gt;
+
+### 單峰鈡型分佈，以 `\(X=\mu\)`為對稱中心
+
+### 在 `\(X=\mu \pm \sigma\)` 有拐點
+
+---
+class: center
+
+### `\(\mu\)` 是位置參數， `\(\sigma\)`是形狀參數
+
+&lt;img src="fig/fig10.png" width="45%" style="display: block; margin: auto;" /&gt;
+
+&lt;img src="fig/fig11.png" width="45%" style="display: block; margin: auto;" /&gt;
+
+---
+class: center
+
+## 密度曲綫下方的面積含義
+
+&lt;img src="fig/fig12.png" width="65%" style="display: block; margin: auto;" /&gt;
+
+### `\(P(X_1&lt;X&lt;X_2)\)`
+
+---
+
+class: center
+
+## 正態分佈密度曲綫的分佈律
+
+&lt;img src="fig/fig13.png" width="75%" style="display: block; margin: auto;" /&gt;
+
+---
+
+class:center
+
+## 標準正態分佈
+
+
+### `\(\mu=0,\sigma=1\)`時: `\(Z\sim N(0,1)\)`
+
+
+&lt;img src="fig/fig14.png" width="85%" style="display: block; margin: auto;" /&gt;
+
+### 標準化： `\(z=\frac{X-\mu}{\sigma}\)`
+
+---
+###已知某地140名成年男子紅細胞計數近似服從正態分佈: 
+### `\(\bar{X}=4.78 \times 10^{12}/L\)` , `\(S=0.38\times 10^{12}/L\)` 求：
+- ###計算該地正常成年男子紅細胞計數在 `\(4.0\times 10^{12}/L\)`以下者佔該地正常成年男子總數的百分比。
+- ###計算紅細胞計數在 `\(4.0\times 10^{12}/L\sim 5.5\times 10^{12}/L\)` 佔該地正常成年男子總數的百分比。
+
+---
+class: inverse,center,middle
+
+## 醫學論文中常用的分析方法
+
+---
+class: center
+
+## 單因素分析
+
+
+&lt;img src="fig/fig15.png" width="95%" style="display: block; margin: auto;" /&gt;
+
+
+https://obgyn.onlinelibrary.wiley.com/doi/10.1002/ijgo.13174
+
+---
+
+## 單因素分析
+
+
+&lt;img src="fig/fig16.png" width="95%" style="display: block; margin: auto;" /&gt;
+
+---
+## 多因素分析
+
+- ### 多重綫性回歸模型
+- ### logistics 回歸模型
+
+&lt;font color='red'&gt;
+- ### 泊松回歸
+- ### cox回歸
+
+---
+
+## 多因素分析
+
+
+&lt;img src="fig/fig17.png" width="95%" style="display: block; margin: auto;" /&gt;
+
+
+https://obgyn.onlinelibrary.wiley.com/doi/10.1002/ijgo.13174
+
+---
+class: inverse,center,middle
+
+# 謝謝大家
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "4:3",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
