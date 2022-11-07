@@ -1,0 +1,57 @@
+---
+title: "統計分析"
+subtitle: "第三講"
+author: "王寧寧， Ph.D"
+institute: oliningning@qq.com
+date: "2022/11/1"
+output:
+  xaringan::moon_reader:
+    css: [default, zh-CN.css]
+    lib_dir: libs
+    nature:
+      ratio: 4:3
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+## 主要内容
+
+- ###非參數檢驗
+- ###卡方檢驗
+
+---
+## 參數檢驗和非參數檢驗
+
+- ### 參數檢驗
+- ### 非參數檢驗
+
+
+
+---
+##非參數檢驗
+
+- ### 爲什麽需要非參數檢驗
+- ### 非參數檢驗
+
+---
+
+## 非參數檢驗應用範圍
+
+- ### 總體分佈為偏態或分佈形式未知時
+- ### 等級資料
+- ### 數據的一端
+- 
+
+
+---
+
+class: inverse, center, middle
+## 參數估計
+---
+
+
